@@ -11,14 +11,14 @@ const word = "magnolia";
 const guessedLetters = [];
 
 const placeholder = function (word) {
-    const placeholderLetter = [];
+    const placeholderLetters = [];
         for (const letter of word) {
             //console.log(letter);
 
-            placeholderLetter.push("•");
+            placeholderLetters.push("•");
         }
 
-    wordInProgress.innerText = placeholderLetter.join("");
+    wordInProgress.innerText = placeholderLetters.join("");
 };
 
 placeholder(word);
@@ -45,23 +45,26 @@ const acceptableInput = function (input) {
     if (input.length ===0) {
         messages.innerText = "Must enter a letter.";
 
-    }else if (input.length > 1) {
+    } else if (input.length > 1) {
         messages.innerText = "Only one letter allowed at a time.";
 
-    }else if (!input.match(acceptedLetter)) {
+    } else if (!input.match(acceptedLetter)) {
         messages.innerText = "Enter a letter A through Z.";
 
-    }else {
+    } else {
         return input;
     }
 };
 
 const makeGuess = function (guess) {
     guess = guess.toUpperCase();
+
     if (guessedLetters.includes(guess)) {
         messages.innerText = "You already guessed that, please try again.";
+   
     } else {
         guessedLetters.push(guess);
+        console.log(guessedLetters);
     }
 
 };

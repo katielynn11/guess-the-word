@@ -3,7 +3,7 @@ const guessLetterButton = document.querySelector(".guess");
 const letterInput = document.querySelector(".letter");
 const wordInProgress = document.querySelector(".word-in-progress");
 const remainingGuessesElement = document.querySelector(".remaining-guesses");
-const remainingGuessesSpan = document.querySelector(".remaining-span");
+const remainingGuessesSpan = document.querySelector(".remaining span");
 const messages = document.querySelector(".messages");
 const playItAgainButton = document.querySelector(".play-it-again");
 
@@ -42,7 +42,7 @@ guessLetterButton.addEventListener("click", function (e) {
 
 const acceptableInput = function (input) {
     const acceptedLetter = /[a-zA-Z]/;
-    if (input.length ===0) {
+    if (input.length === 0) {
         messages.innerText = "Must enter a letter.";
 
     } else if (input.length > 1) {

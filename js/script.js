@@ -66,7 +66,7 @@ const makeGuess = function (guess) {
         guessedLetters.push(guess);
         console.log(guessedLetters);
         showGuessedLetters();
-        updateWordInProgess(guessedLetters);
+        updateWordInProgress(guessedLetters);
     }
 };
 

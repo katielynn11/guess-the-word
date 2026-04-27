@@ -74,7 +74,7 @@ const acceptableInput = function (input) {
 
 
     } else if (!input.match(acceptedLetter)) {
-        messages.innerText = "Enter a letter A through Z.";
+        messages.innerText = "That's not a letter.";
 
 
     } else {

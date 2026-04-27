@@ -76,7 +76,7 @@ h1 {
   padding: 0 0.5em;
 }
 
-.message {
+.messages {
   text-align: center;
 }
 
@@ -110,13 +110,13 @@ input:focus {
 }
 
 .guess,
-.play-again {
+.play-it-again {
   padding: 1em 3em;
   border-radius: 50px;
   margin-top: 1em;
-  color: #D64000;
+  color: #ff6699;
   background: white;
-  border: 5px solid #f37945;
+  border: 5px solid #ffb3cc;
   font-size: 1em;
   align-self: center;
   outline: none;
@@ -124,22 +124,22 @@ input:focus {
 }
 
 .guess:active,
-.play-again:active,
+.play-it-again:active,
 .guess:focus,
-.play-again:focus,
+.play-it-again:focus,
 .guess:hover,
-.play-again:hover {
+.play-it-again:hover {
   outline: 0;
   transform: scale(0.98);
-  color: #D64000;
+  color: #ff6699;
   text-decoration: underline;
-  text-decoration-color: #f37945;
+  text-decoration-color: #ffb3cc;
 }
 
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, #ffb3cc, #ff6699);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }

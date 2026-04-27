@@ -153,7 +153,7 @@ const updateGuessesRemaining = function (guess) {
 
 
     if (remainingGuesses === 0) {
-        messages.innerHTML = `Sorry! <span class="highlight">${word}</span> won this round!`;
+        messages.innerHTML = `Sorry! <span class="highlight">${word}</span> won this round.`;
         startOver();
 
 
@@ -170,7 +170,7 @@ const updateGuessesRemaining = function (guess) {
 const checkIfWon = function () {
    
     if (word.toUpperCase() === wordInProgress.innerText) {
-        messages.classList.add("winner");
+        messages.classList.add("win");
         messages.innerHTML = `<p class="highlight"> You did it! Winner winner chicken dinner!</p>`;
        
         startOver();
@@ -187,7 +187,7 @@ const startOver = function () {
 
 
 playItAgainButton.addEventListener("click", function () {
-    messages.classList.remove("winner");
+    messages.classList.remove("win");
     guessedLetters = [];
     remainingGuesses = 8;
     remainingGuessesSpan.innerText = `${remainingGuesses} guesses`;
